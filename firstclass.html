@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        background-color: #000000; /* Change this to your desired background color */
+      }
+
+      video {
+        width: 50%;
+        height: auto;
+        
+    }
+    
+    
+    #play-pause-btn {
+        cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+    
+    <h1 style="color:rgb(255, 255, 255);">INTRODUCTION TO WEB DEVELOPMENT PART1</h1>
+
+    <ul>
+        <li><a href="classes.html" style="color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(19, 163, 230); padding: 4px;">BACK TO CLASSES LIST</a></li>
+    </ul>
+   
+<main>
+    <video id="videoPlayer" controls>
+        <source src="part1html.mp4.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    
+    <button id="play-pause-btn">Play/Pause</button>
+    
+    <script>
+        var video = document.getElementById("videoPlayer");
+        var playPauseButton = document.getElementById("play-pause-btn");
+    
+        playPauseButton.addEventListener("click", function() {
+            if (video.paused) {
+                video.play();
+                playPauseButton.textContent = "Pause";
+            } else {
+                video.pause();
+                playPauseButton.textContent = "Play";
+            }
+        });
+    </script>
+</main>
+</body>
+</html>
