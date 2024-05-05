@@ -28,13 +28,15 @@
     <h1 style="color:rgb(255, 255, 255);">INTRODUCTION TO WEB DEVELOPMENT PART1</h1>
 
     <ul>
-        <li><a href="classes.html" style="color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(19, 163, 230); padding: 4px;">BACK TO CLASSES LIST</a></li>
-        <li><a href="index.html" style="color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(19, 163, 230); padding: 4px;">BACK TO HOME</a></li>
+        <li><a href="classes.html" style="color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(19, 163, 230); padding: 2px;">BACK TO CLASSES LIST</a></li> <br>
+        <li><a href="index.html" style="color: rgb(255, 255, 255); text-decoration: none; background-color: rgb(19, 163, 230); padding: 2px;">BACK TO HOME</a></li>
     </ul>
    
 <main>
     <video id="videoPlayer" controls>
         <source src="part1html.mp4.mp4" type="video/mp4">
+        
+
         Your browser does not support the video tag.
     </video>
     
@@ -54,6 +56,30 @@
             }
         });
     </script>
+
+<video id="videoPlayer" controls>
+    <source src="part2html.mp4.mp4" type="video/mp4">
+    
+
+    Your browser does not support the video tag.
+</video>
+
+<button id="play-pause-btn">Play/Pause</button>
+
+<script>
+    var video = document.getElementById("videoPlayer");
+    var playPauseButton = document.getElementById("play-pause-btn");
+
+    playPauseButton.addEventListener("click", function() {
+        if (video.paused) {
+            video.play();
+            playPauseButton.textContent = "Pause";
+        } else {
+            video.pause();
+            playPauseButton.textContent = "Play";
+        }
+    });
+</script>
 </main>
 </body>
 </html>
